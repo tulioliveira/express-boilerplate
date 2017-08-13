@@ -5,7 +5,7 @@ var app        = express();
 
 // Database Setup
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://mongo:27017", {
+mongoose.connect("mongodb://mongo:27017/project_db_name", {
 	keepAlive: true,
 	reconnectTries: Number.MAX_VALUE,
 	useMongoClient: true
@@ -17,9 +17,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function(req, res){
-  res.send("Hello World");
+	res.render("index");
 });
 
 app.listen(3000, function(){
-  console.log('Example app listening on port 3000!');
+	console.log('Example app listening on port 3000!');
 });
