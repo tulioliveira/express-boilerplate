@@ -7,7 +7,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 //DB setup
-mongoose.connect("mongodb://mongo:27017");
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://mongo:27017", {
+	keepAlive: true,
+	reconnectTries: Number.MAX_VALUE,
+	useMongoClient: true
+});
 
 app.get('/', function(req, res){
   res.send("Hello World");
