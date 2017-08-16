@@ -1,8 +1,21 @@
-.ui.main.menu
+.main.menu
 {
-    -webkit-box-shadow: 0 6px 5px rgba(100, 100, 100, .7);
-       -moz-box-shadow: 0 6px 5px rgba(100, 100, 100, .7);
-            box-shadow: 0 6px 5px rgba(100, 100, 100, .7);
+    margin-top: 2em !important;
+
+    transition: box-shadow .5s ease,
+    padding .5s ease;
+
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.main.menu.fixed
+{
+    margin-top: 0em !important;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
 }
 
 .ui.margin.bottom.small
