@@ -5,7 +5,6 @@ var mongoose              = require('mongoose');
 var methodOverride        = require('method-override');
 var passport              = require('passport');
 var LocalStrategy         = require('passport-local');
-var passportLocalMongoose = require('passport-local-mongoose');
 // var seedDB             = require("./seeds");
 var app                   = express();
 
